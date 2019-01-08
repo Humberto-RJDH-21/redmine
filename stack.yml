@@ -6,14 +6,14 @@ services:
     image: meltsan/redmine:1.0
     restart: always
     ports:
-      - 3000:3000
+      - 8085:3000
     environment:
       REDMINE_DB_MYSQL: db
-      REDMINE_DB_PASSWORD: example
+      REDMINE_DB_PASSWORD: meltsan2019
 
   db:
     image: mysql:5.7.23
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: example
+      MYSQL_ROOT_PASSWORD: meltsan2019
       MYSQL_DATABASE: redmine
